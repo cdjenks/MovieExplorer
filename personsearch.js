@@ -33,7 +33,6 @@ function getPersonID(inputPerson) {
             knownForMovieDiv.append(knownForMovie);
             $("#known-for-movies").append(knownForMovieDiv);
         }
-
         let personID = response.results[0].id;
         detailsURL = `https://api.themoviedb.org/3/person/${personID}?api_key=f525ce5267c2b7a71ca77cde7ecb1c1b&language=en-US`
 
