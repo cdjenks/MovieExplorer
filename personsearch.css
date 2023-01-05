@@ -12,8 +12,14 @@ html, body {
     min-height: 120px;
 }
 
+.nav-link {
+    color:rgb(52, 194, 250);
+    font-weight: 900;
+}
+
+
 #website-title {
-    color: rgb(150, 15, 15);
+    color: rgb(165, 27, 27);
     font-size: 60px;
     
 }
@@ -40,10 +46,11 @@ html, body {
 
 #search-button {
     margin: 20px;
-    background-color: blue;
+    background-color: rgb(52, 194, 250);
     border-radius: 20px;
     padding: 6px 28px;
     font-size: 24px;
+    font-weight: 500;
 }
 
 .centered-item {
