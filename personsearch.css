@@ -1,0 +1,107 @@
+html, body {
+    background-color: black;
+    background-image: url("cinema.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%
+}
+
+#my-navbar {
+    background-color: black;
+    min-height: 120px;
+}
+
+#website-title {
+    color: rgb(150, 15, 15);
+    font-size: 60px;
+    
+}
+
+.main-container {
+    height: 90%;
+}
+
+#person-input {
+    color: white;
+    width: 260px;
+    height: 40px;
+    background-color: black;
+    margin: 40px 20px 20px 20px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#person-input::placeholder {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#search-button {
+    margin: 20px;
+    background-color: blue;
+    border-radius: 20px;
+    padding: 6px 28px;
+    font-size: 24px;
+}
+
+.centered-item {
+    width: 100%; 
+    text-align: center;
+    display: block;
+}
+
+#person-headshot {
+    max-height: 500px;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+#search-label {
+    color: white;
+    font-size: 38px;
+    margin-bottom: 60px;   
+}
+
+#actor-info {
+    max-height: 50%;
+    min-height: 50%;
+    background-color: (black, .9);
+    min-height: 800px;
+}
+
+#person-name, #person-biography, #person-dob {
+    color: white;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#person-name {
+    text-decoration: underline;
+    font-size: 50px;
+    
+}
+
+#person-biography {
+    font-style: italic;
+}
+
+#known-for-movies {
+    color: white;
+    font-size: 24px;
+    padding: 10px; 
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+#known-for-label {
+    color: white;
+    font-size: 32px;
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
