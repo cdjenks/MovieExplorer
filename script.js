@@ -22,7 +22,9 @@ function movieOrTVShow() {
     if (isChecked === true) {
         $("#is-movie").removeClass("highlighted")
         $("#is-tvshow").addClass("highlighted")
+        //Remove related movies label and any related movie posters from a prior search when TV Shows is selected
         $("#similar-movies-label").addClass("hide")
+        $("#similar-movies").html('');
     } else {
         $("#is-movie").addClass("highlighted")
         $("#is-tvshow").removeClass("highlighted")
