@@ -6,7 +6,7 @@ $("#search-button").on('click', function (event) {
     //Clearing input field
     $("#person-input").val("");
 });
-//Event handler for "enter" button being pressed to submit movie title
+//Event handler for "enter" button being pressed to submit person's name
 $("#person-input").keyup(function (event) {
     if (event.keyCode == 13) {
 
@@ -24,15 +24,17 @@ function getPersonID(inputPerson) {
         method: "GET"
     }).then(function (response) {
         console.log(response.results[0]);
-
+        //Clear noteable performances from past searches and display label if first search since page load
         $("#known-for-movies").html('');
         $("#known-for-label").removeClass("hide");
         for (let i = 0; i < response.results[0].known_for.length; i++) {
-            let knownForMovie = $("<li>").text(response.results[0].known_for[i].title);
+            //Ternary to deteremine if noteable performance was in a movie or TV show since a TV Show's title is stored as "name" in the response object
+            let knownForMovie = (response.results[0].known_for[i].title ? $("<li>").text(response.results[0].known_for[i].title) : $("<li>").text(response.results[0].known_for[i].name))
             let knownForMovieDiv = $("<div>")
             knownForMovieDiv.append(knownForMovie);
             $("#known-for-movies").append(knownForMovieDiv);
         }
+        //2nd ajax request to get person details after having secured person ID from first request
         let personID = response.results[0].id;
         detailsURL = `https://api.themoviedb.org/3/person/${personID}?api_key=f525ce5267c2b7a71ca77cde7ecb1c1b&language=en-US`
 
